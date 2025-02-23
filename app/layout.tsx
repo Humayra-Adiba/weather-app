@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
+import Providers from "./providers";
 
 export const metadata = {
   title: "Weather App ",
@@ -12,11 +13,14 @@ const poppins = Poppins({
   style: ["normal", "italic"],
 });
 
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.className}>
-      <body> 
-        {children}
+      <body>
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
