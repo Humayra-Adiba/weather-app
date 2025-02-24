@@ -14,8 +14,8 @@ export default function Home() {
   let content;
   if (!location) {
     content = (
-      <div className="text-center h-screen mt-[5rem]">
-        <h2 className="md:text-5xl text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
+      <div className="text-center h-screen mt-[5rem]"  >
+        <h2 className="md:text-6xl text-3xl font-bold mb-4 bg-gradient-to-r from-blue-700 to-green-500 bg-clip-text text-transparent">
           Weather Insight
         </h2>
         <p className="md:text-xl text-lg font-semibold text-gray-600">
@@ -60,7 +60,7 @@ export default function Home() {
   } else {
     content = (
       <>
-        <div className="flex md:flex-row flex-col p-12 items-center justify-between gap-10">
+        <div className="flex md:flex-row flex-col md:p-12 p-3 items-center justify-between gap-10" >
           <Current data={data} />
           <WeekForecast data={data} />
         </div>
@@ -72,15 +72,15 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800" >
+      <div className="container mx-auto px-4 py-8" >
         <div className="flex flex-col md:flex-row justify-between items-center mb-12">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent mb-6 md:mb-0">
             WeatherApp
           </h1>
           <Input setLocation={setLocation} />
         </div>
-        <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-xl">
+        <div className="p-8 rounded-3xl" style={{backgroundImage: "url('/weather.gif')", backgroundSize: "cover", backgroundPosition: "center"}}>
           {content}
         </div>
       </div>

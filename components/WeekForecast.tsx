@@ -28,7 +28,7 @@ const WeekForecast = ({ data }: WeekForecastProps) => {
 
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 w-full">
+    <div className="grid grid-cols-1  md:grid-cols-4 lg:grid-cols-7 gap-8 w-full">
       {data.forecast.forecastday.slice(0, 7).map((day, index) => (  // Ensures exactly 7 days
         <div
           key={index}
