@@ -9,7 +9,7 @@ import { FiCloudRain, FiSun, FiWind } from "react-icons/fi";
 
 export default function Home() {
   const [location, setLocation] = useState("");
-  const { data, error, isError, isPending } = useWeather(location);
+  const { data, isError, isPending } = useWeather(location);
 
   let content;
   if (!location) {

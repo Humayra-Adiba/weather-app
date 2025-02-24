@@ -64,6 +64,6 @@ const WeekForecast = ({ data }: WeekForecastProps) => {
     </div>
   );
 };
-
+// 
 
 export default WeekForecast;

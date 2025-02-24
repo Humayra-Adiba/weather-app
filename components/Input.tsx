@@ -1,5 +1,5 @@
 "use client";
-import { FaSearch as SearchIcon } from "react-icons/fa";
+// import { FaSearch as SearchIcon } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 import { useState, useEffect } from "react";
 

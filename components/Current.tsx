@@ -1,5 +1,4 @@
 import { getCurrentDate } from "../utils/currentDate";
-import Loc from "react-icons";
 
 interface CurrentProps {
   data: {
@@ -25,7 +24,7 @@ const Current = ({ data }: CurrentProps) => {
         <h1 className="text-2xl font-bold text-gray-100">Current Weather</h1>
         <p className="text-gray-200">{currentDate}</p>
       </div>
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-3">
         {data.current?.condition.icon && (
           <img
             src={`https:${data.current.condition.icon}`}
@@ -34,7 +33,7 @@ const Current = ({ data }: CurrentProps) => {
           />
         )}
         <div>
-          <p className="text-5xl font-bold text-white">
+          <p className="text-3xl font-bold text-white">
             {data.current?.temp_c.toFixed()}
             <span className="text-3xl">°C</span>
           </p>

@@ -1,6 +1,7 @@
-import { env } from "@/env";
+
 
 export const fetchWeather = async (location: string) => {
+
   const response = await fetch(
     `/api/getWeather?location=${location}`
   );
